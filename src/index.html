@@ -1,1 +1,205 @@
-<h1>Hello World</h1> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop - Premium Online Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-sky-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-sky-500 text-white fixed w-full z-50 shadow">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-gem text-2xl"></i>
+                <span class="font-bold text-xl">eShop</span>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#products" class="hover:underline">Products</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+                <a href="#cart" class="relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-xs px-1 rounded-full">5</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 text-center py-20 bg-gradient-to-r from-sky-400 to-blue-500 text-white">
+        <h1 class="text-4xl md:text-5xl font-bold gradient-text">Welcome to eShop</h1>
+        <p class="mt-4 text-lg">Your premium destination for cutting-edge technology and innovative products</p>
+        <div class="mt-6 flex justify-center space-x-4">
+            <button class="bg-white text-sky-500 font-bold px-6 py-2 rounded-full shadow hover:bg-gray-100">Start Shopping</button>
+            <button class="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-sky-500">Watch Demo</button>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="glass p-6 text-center">
+                <i class="fa-solid fa-truck text-3xl text-sky-500 mb-2"></i>
+                <h3 class="font-bold">Free Shipping</h3>
+                <p class="text-sm">On orders over $75 worldwide</p>
+            </div>
+            <div class="glass p-6 text-center">
+                <i class="fa-solid fa-lock text-3xl text-sky-500 mb-2"></i>
+                <h3 class="font-bold">Secure Payment</h3>
+                <p class="text-sm">100% secure and encrypted transactions</p>
+            </div>
+            <div class="glass p-6 text-center">
+                <i class="fa-solid fa-headset text-3xl text-sky-500 mb-2"></i>
+                <h3 class="font-bold">24/7 Support</h3>
+                <p class="text-sm">Round-the-clock customer service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section id="products" class="py-16">
+        <h2 class="text-center text-3xl font-bold mb-8">Trending Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Product Card -->
+            <div class="glass p-6 text-center">
+                <div class="relative">
+                    <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-25%</div>
+                    <div class="bg-gray-200 h-40 rounded mb-4"></div>
+                </div>
+                <h3 class="font-bold">Premium Gaming Headset</h3>
+                <p class="text-gray-600">7.1 surround sound, RGB lighting</p>
+                <p class="text-lg font-bold mt-2">$89.99 <span class="line-through text-gray-400">$119.99</span></p>
+                <button class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 mt-3 rounded">Add to Cart</button>
+            </div>
+            <!-- Repeat for more products -->
+            <div class="glass p-6 text-center">
+                <div class="relative">
+                    <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</div>
+                    <div class="bg-gray-200 h-40 rounded mb-4"></div>
+                </div>
+                <h3 class="font-bold">Smart Home Speaker</h3>
+                <p class="text-gray-600">Voice controlled, superior sound</p>
+                <p class="text-lg font-bold mt-2">$59.99</p>
+                <button class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 mt-3 rounded">Add to Cart</button>
+            </div>
+            <div class="glass p-6 text-center">
+                <div class="relative">
+                    <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">Hot</div>
+                    <div class="bg-gray-200 h-40 rounded mb-4"></div>
+                </div>
+                <h3 class="font-bold">Wireless Earbuds Pro</h3>
+                <p class="text-gray-600">Noise cancellation, 24hr battery</p>
+                <p class="text-lg font-bold mt-2">$129.99</p>
+                <button class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 mt-3 rounded">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Table -->
+    <section class="py-10">
+        <h2 class="text-center text-3xl font-bold mb-6">Complete Product Catalog</h2>
+        <div class="overflow-x-auto max-w-6xl mx-auto">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-sky-500 text-white">
+                    <tr>
+                        <th class="px-4 py-2">Product</th>
+                        <th class="px-4 py-2">Category</th>
+                        <th class="px-4 py-2">Price</th>
+                        <th class="px-4 py-2">Rating</th>
+                        <th class="px-4 py-2">Stock</th>
+                        <th class="px-4 py-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr class="hover:bg-sky-50">
+                        <td class="px-4 py-2">Premium Gaming Headset</td>
+                        <td class="px-4 py-2">Gaming</td>
+                        <td class="px-4 py-2 font-bold">$89.99</td>
+                        <td class="px-4 py-2">⭐ 4.8</td>
+                        <td class="px-4 py-2 text-green-500">In Stock</td>
+                        <td class="px-4 py-2">
+                            <button class="bg-sky-500 text-white px-3 py-1 rounded">Add</button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-sky-50">
+                        <td class="px-4 py-2">Wireless Earbuds Pro</td>
+                        <td class="px-4 py-2">Audio</td>
+                        <td class="px-4 py-2 font-bold">$129.99</td>
+                        <td class="px-4 py-2">⭐ 4.7</td>
+                        <td class="px-4 py-2 text-yellow-500">Limited</td>
+                        <td class="px-4 py-2">
+                            <button class="bg-sky-500 text-white px-3 py-1 rounded">Add</button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-sky-50">
+                        <td class="px-4 py-2">Smart Home Speaker</td>
+                        <td class="px-4 py-2">Smart Home</td>
+                        <td class="px-4 py-2 font-bold">$59.99</td>
+                        <td class="px-4 py-2">⭐ 4.5</td>
+                        <td class="px-4 py-2 text-red-500">Out of Stock</td>
+                        <td class="px-4 py-2">
+                            <button class="bg-gray-300 text-gray-500 px-3 py-1 rounded cursor-not-allowed" disabled>Sold Out</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sky-600 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-bold text-lg mb-2">About eShop</h4>
+                <p>Your trusted online destination for premium electronics and accessories.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Quick Links</h4>
+                <ul>
+                    <li><a href="#home" class="hover:underline">Home</a></li>
+                    <li><a href="#products" class="hover:underline">Products</a></li>
+                    <li><a href="#about" class="hover:underline">About Us</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Follow Us</h4>
+                <div class="space-x-4 text-xl">
+                    <a href="#"><i class="fa-brands fa-facebook hover:text-gray-300"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter hover:text-gray-300"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram hover:text-gray-300"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube hover:text-gray-300"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-6 text-sm">&copy; 2025 eShop. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#top" class="fixed bottom-6 right-6 bg-sky-500 text-white p-3 rounded-full shadow hover:bg-sky-600">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+</html>
